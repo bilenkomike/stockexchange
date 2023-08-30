@@ -1,0 +1,41 @@
+/* roots */
+:root {
+    /*font-family: 'Ubuntu', sans-serif;*/
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-family: 'Dancing Script', cursive;*/
+    /*font-family: 'Caveat', cursive;*/
+    /*font-family: 'Orbitron', sans-serif;*/
+
+
+    /*font-family: 'Lemonada', cursive;*/
+    /*font-family: 'Bodoni Moda', serif;*/
+    /*font-family: 'Sansita Swashed', cursive;*/
+    --fz: 15px;
+    --burger-menu-toogle: none;
+    --bgbm: #f2f2f2;
+    --header__bgc: #0D0D0D;
+    --mobile__nav__display: none;
+    --bgc__footer__pagination: #0D0D0D;
+    --nav__block: block;
+    --sidebar-view:0;
+    --controll__display: block;
+    --short__post__bg: #0D0D0D;
+    --btnimagesend: #eee;
+    --btnimageloadbg: #f2f2f2;
+    --btnimageloadco: #202020;
+    --undcolor: #f2f2f2;
+    --postbgc: #0D0D0D;
+    --info__urlc: #f2f2f2;
+    --wff:'Ubuntu', sans-serif;
+    --filterbgc: #0D0D0D;
+    --interest__header: #F3EBA2;
+    --filter__underline: rgb(242,242,242);
+    --search__bgc: #202020;
+    --modal__bgc: #202020;
+    --scroll_bg : #e5e5e5;
+    --breadcrumb: #212121;
+    --chat__bgc: #232323;
+    --mess__list__item__bgc: #131313;
+    --mess__list__item__border__bgc: #0D0D0D;
+    /*--checkbox__remember*/
+}

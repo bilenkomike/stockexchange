@@ -1,0 +1,131 @@
+/*form*/
+.form {
+
+}
+
+.form.shotpostform {
+    position: relative;
+    height: 102px;
+}
+
+.form__input {
+    padding: 1.35rem;
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.nav__item:hover >.form {
+    background-color: none;
+}
+
+.form__header {
+    margin: 1rem 0;
+    font-weight: 500;
+    font-size: 18px; 
+}
+
+.form__gruop {
+    display: flex;
+}
+
+.form__input.shortpost {
+    border: 0;
+
+    width: 70%;
+    height: 62px;
+    border-bottom: 2px solid #000;
+
+    transition: border .3s ease-in;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    color: inherit;
+
+    line-height: 1.2;
+    resize: none;
+    overflow: hidden;
+}
+
+.form__input.shortpost:placeholder {
+    color: inherit;
+    opacity: .2;
+}
+
+
+.form__input.shortpost:focus {
+    outline: none;
+    border-bottom: 2px solid blue;
+}
+
+.from--auth {
+    display: table;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form__buttons {
+    display: flex;
+    margin: auto;
+}
+
+.select__images__content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    width: 100%;
+}
+.select__images__item {
+    display: block;
+    position: relative;
+    margin: 0px 10px;
+}
+.select__image__block {
+    display: block;
+    width: 175px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(35,35,35, .8);
+}
+
+.input__select__image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #202020;
+    font-size: 0;
+    background-color: #e5e5e5;
+
+}
+
+
+
+.selected__image {
+    display: none;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: #202020;
+}
+
+.selected__image.active {
+    display: block;
+}
+
+
+@media screen and ( max-width:1024px ) {
+    .from--auth {
+        /*max-width: ;*/
+        margin: 0 auto;
+    }
+}

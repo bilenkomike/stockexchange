@@ -1,0 +1,83 @@
+/*burger*/
+
+.burger {
+    background: none;
+    bottom: 0;
+    color: transparent;
+    position: absolute;
+    margin: 15px;
+    top: -3px;
+    display: var(--burger-menu-toogle);
+    width: 100%;
+    max-width: 35px;
+    cursor: pointer;
+    height: 30px;
+}
+
+#controll__burger.burger {
+    display: block;
+    height: 50px;
+    right: 0; 
+    top: 50px;
+    transform: translateX(0);
+
+    transition: transform .3s linear;
+
+    position: fixed;
+}
+
+#controll__burger.burger.bact {
+    transform: translateX(-300px);
+}
+
+.burgermenu {
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    font-size: 0;
+    width: 35px;
+    height: 3px;
+    background-color: var(--bgbm);
+    /*color: inherit;*/
+
+    transition: transform .2s linear;
+}
+
+.bact.burger {
+    margin-top: 20px;
+}
+
+.bact > .burgermenu {
+    position: absolute;
+    text-align: center;
+}
+
+.bact > .burgermenu:first-child {
+    display: none;
+}
+
+.bact > .burgermenu {
+    transform: rotate(45deg);
+}
+.bact > .burgermenu:last-child {
+    transform: rotate(135deg);
+}
+
+
+/*toggle__sidebar__side*/
+#toggle__sidebar__side {
+    transition: opacity .3s linear;
+}
+
+#toggle__sidebar__side:hover {
+    opacity: .4;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .burger {
+        display: block;
+    }
+}

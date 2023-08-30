@@ -1,0 +1,19 @@
+/*container*/
+.container {
+    width: 100%;
+    margin:  100px auto 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+        margin: 100px 5px 50px 2px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .container {
+        width: 100%;
+        margin: 100px 5px 50px 2px;
+    }
+}

@@ -1,0 +1,53 @@
+/*modals*/
+.modal {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    background-color: rgba(5,5,5, .8);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+}
+.modal__content {
+    width: 100%;
+    max-width: 500px;
+    padding: 4rem 8rem 2.5rem;
+
+    background-color: var(--modal__bgc);
+    border-radius: 5px;
+
+    position: relative;
+}
+.modal__content--story {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    padding: 0;
+}
+.modal__content--story > img {
+    margin: 0 auto;
+}
+
+.modal.selected {
+    display: flex;
+}
+
+
+
+@media screen and (max-width: 414px) {
+    .modal__content {
+        padding: 4rem 5rem 2.5rem;
+    }
+    .modal__content--story {
+        max-width: 100vw;
+    }
+}

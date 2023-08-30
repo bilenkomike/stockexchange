@@ -1,0 +1,26 @@
+
+
+/*avatar*/
+.avatar {
+    display: block;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.avatar__image {
+    display: block;
+    background-size: cover;
+    background-position:center;
+    border-radius: 50%;
+    border: 2px solid;
+    height: 105px;
+    width: 105px;
+}
+
+
+.avatar__image.mobile {
+    margin: 0 auto;
+}

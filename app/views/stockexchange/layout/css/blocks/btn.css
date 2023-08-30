@@ -1,0 +1,272 @@
+/*btn*/
+.btn--gruop {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+
+
+.btn--gruop__item {
+    width: 50%;
+}
+
+.btn {
+    background: transparent;
+    color: #ffff;
+    border: 0;
+    outline: none;
+}
+
+.btn--mnsd {
+    display: block;
+    width: 100%;
+    max-width: 130px;
+    padding: 10px;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid #3333;    
+    border-radius: 7px;
+
+    opacity: 100%;
+
+    transition: opacity .2s linear;
+}
+
+.btn--mnsd:hover {
+    opacity: 75%;
+}
+
+
+.btn--mnsd--red {
+    margin-left: 5px;
+    background-color: #CD251A;
+}
+
+.btn--mnsd--blue {
+    background-color: #3137C9;
+}
+
+.btn--mnsd--black {
+    background-color: #0D0D0D;
+}
+
+
+.btn--mnsd--orange {
+    background-color: #ff6600;
+}
+.btn--mnsd--green {
+    background-color: #006600;
+}
+
+.btn.btn--imgload {
+    
+}
+
+.btn.btn--imgload i{
+    
+    font-size: 25px;
+
+    padding: 10px;
+
+    background-color: var(--btnimageloadbg);
+
+    border-radius: 50%;
+
+    color: var(--btnimageloadco);
+
+    cursor: pointer;
+
+    top: 100%;
+    bottom: 0;
+}
+
+.btn.btn--send i{
+    
+    padding: 10px;
+
+    background-color: rgb(49, 55, 201);
+    border-radius: 50%;
+
+    font-size: 25px;
+    color: #f2f2f2;
+
+    cursor: pointer;
+
+    transform: rotate(45deg);
+
+  
+}
+
+.btn.btn--submit {
+    color: inherit;
+    margin: 20px 280px;
+
+    padding: 10px;
+    width: 100px;
+    border: 2px solid grey;
+
+    transition: background-color .2s linear,
+                color .2s linear;
+}
+
+.btn.btn--submit:hover {
+    background-color: #f2f2f2;
+    color: #202020;
+} 
+
+.btn.btn--logreg {
+    display: block;
+    padding: 15px 40px;
+    margin: 20px auto 0;
+    justify-content: center;
+
+    background-color: #0000e6;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,230, .3);
+
+    transition: background-color .2s linear;
+}
+
+.btn.btn--logreg:hover {
+    background-color: #0000b8;
+}
+
+.btn--textCommand {
+    margin: 5px 5px;
+    padding: 5px;
+
+    border-radius: 3px;
+    border: 1px solid #0D0D0D;
+
+    color: inherit;
+    font-size: 18px;
+
+    transition: box-shadow .2s linear;
+}
+
+.btn--textCommand.active {
+    font-weight: 700;
+    transform: scale(1.1);
+    background-color: #212121;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.4);
+}
+
+.btn--textCommand:hover {
+    box-shadow: 3px 3px rgba(5,5,5, .4);
+}
+
+.btn--modal--close {
+    display: block;
+
+    font-size: 25px;
+
+    position: absolute;
+    top: 20px;
+    right: 50px;
+
+    transition: transform .3s linear;
+
+}
+
+
+.btn--modal--close:hover {
+    transform: rotate(180deg);
+}
+
+.message__btn {
+    display: block;
+    width: 60px;
+    /*padding: auto;*/
+    margin: 0 5px;
+    vertical-align: middle;
+
+    color: #f2f2f2;
+    
+    
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.message__btn--add {
+    background-color: #000;
+}
+
+.loadimage__btn {
+    display: block;
+
+    cursor: pointer;
+
+    text-align: center;
+    position: relative;
+}
+
+
+
+.btn__img__hover {
+    display: block;
+    width: 94%;
+    height: 0;
+    margin: 0 7px;
+
+    cursor: pointer;
+
+    background-color: #444;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.btn__img__load__icon {
+    display: block;
+    padding: 35px;
+    
+    font-size: 30px;
+    position:absolute;
+    top: 30%;
+    left:30%;
+    opacity: 0;
+
+    transition: opacity .2s linear;
+}
+
+.loadimage__btn > .btn__img__hover {
+    transition: all .2s linear;
+
+}
+
+.loadimage__btn:hover > .btn__img__hover {
+    height: 100%;
+}
+
+.loadimage__btn:hover > .btn__img__hover > .btn__img__load__icon {
+    opacity: 1;
+}
+
+.btn__gruop--accordion {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.richTextButtons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px auto;
+
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    box-shadow: 10px 10px 10px rgba(0,0,0,.6) ;
+}
+
+@media screen and (max-width: 1024px) {
+    .btn.btn--logreg {
+        margin: 20px auto 0px;
+    }
+}

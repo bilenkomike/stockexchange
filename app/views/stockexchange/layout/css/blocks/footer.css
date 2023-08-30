@@ -1,0 +1,22 @@
+/*footer*/
+.footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 100px 0 100px;
+    left: 0%;
+    
+}
+
+.footer__inner {
+    
+}
+
+
+@media screen and (max-width: 485px) {
+    .footer {
+        width: 100%;
+        margin: 100px 10px 100px -2px;
+        overflow-x: auto;
+    }
+}

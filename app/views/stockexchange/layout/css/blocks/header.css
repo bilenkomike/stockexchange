@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    width: calc(100%);
+
+    background-color: var(--header__bgc);
+    box-shadow: 0 5px 22px rgba(5,5,5, .25);
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__mobile {
+    display: none;
+}
+
+.st.header {
+    right: 0;
+}
+
+.header__left {
+    width: 40%;
+}
+
+.header__right {
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+
+@media screen and (max-width: 1340px) {
+    .header__left {
+        width: 20%;
+    }
+    .header__right {
+        width: 80%;
+    }
+}

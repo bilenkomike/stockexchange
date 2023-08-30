@@ -1,0 +1,82 @@
+/* scrollbar */
+
+*::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+    opacity: .8;
+}
+ 
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+ 
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbg);
+    border-radius: 40px;
+    
+}
+
+/*body*/
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-family: -apple-system,
+        BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--wff);
+    color: #fff;
+    font-size: var(--fz);
+    transition: background-color .2s ease-in-out, 
+    color .2s linear;
+    /*cursor: pointer;*/
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+body.mask {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: #0D0D0D;
+
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.w {
+    background-color: #fff;
+    color: #202020;
+}
+.b {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+*,
+*:after,
+*:before {
+box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+iframe[name=richTextField] {
+    /*background-color: #ffff;*/
+}
+
+@media screen and (max-width: 324px) {
+    
+}

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CV</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.sidebar {
+			display: block;
+			width: 300px;
+			height: 100vh;
+
+			color: #fff;
+
+			background-color: #050F34;
+
+			position: fixed;
+			overflow: hidden;
+			left: 0;
+			top: 0;
+		}
+
+		.sidebar__content {
+
+			margin-left: 20px;
+			overflow: auto;
+		}
+
+		.sidebar__content__block {
+			margin: 5px 0;
+		}
+
+		.sidebar__content__block > p,
+		.sidebar__content__block > address,  
+		.sidebar__content__block > time {
+			margin-left: 10px;
+			font-size: 16px;
+		}
+
+		.sidebar__content__block > summary {
+			/*margin-left: -10px;*/
+			font-size: 19px;
+			font-weight: 700;
+		}
+
+		.sidebar__lb {
+			width: 90%;
+			margin-left: auto;
+		}
+
+		.content {	
+			display: block;
+			width: 100%;
+			max-width: 1200px;		
+			margin: auto;
+			padding: 20px;
+
+			color: #000046;
+
+			position: absolute;
+			top: 0;
+			left: 400px;	
+		}
+
+		.content__header {
+			
+		}
+
+		.content__item {
+			margin-bottom: 50px;
+		}
+
+		.avatar {
+			display: block;
+			width: 100%;
+			max-width: 150px;
+			height: 150px;
+			margin: 20px auto;
+
+			border-radius: 50%;
+			border: 2px solid #fff;
+
+		}
+
+		.skills {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			margin-left: 0;
+		}
+
+		.skill__item {
+			display: flex;
+			margin-right: 25px;
+			width: 46%;
+
+			justify-content: space-between;
+
+		}
+		.degree {
+			display: block;
+			width: 100px;
+			height: 5px;
+			margin: auto 40px auto 10px;
+
+			border-radius: 30px;
+
+			background-color: #331b39;
+
+			position: relative;
+			z-index: 1;
+		}
+		.degree__level {
+			display: block;
+			
+			height: 5px;
+
+			border-radius: 30px;
+
+			background-color: #FA6267;
+
+			position: absolute;
+
+
+		}
+		.name {
+			text-transform: capitalize;
+			font-size: 40px;
+		}
+		.profs {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+
+		.prof {
+			font-size: 25px;
+			width: 50%;
+			
+			margin-bottom: 5px;
+		}
+
+		.lb {
+			width: 100%;
+		}
+
+		.main__title {
+			margin-bottom: 30px;
+
+			font-size: 25px;
+			font-weight: 700;
+			color: #FA6267;
+		}
+
+		.item__info {
+			display: flex;
+
+			justify-content: space-between;
+
+			color: inherit;
+		}
+
+		.info {
+			display: block;
+			width: 70%;
+		}
+
+		.title {
+			margin-bottom: 15px;
+
+			font-weight: 700;
+			font-size: 22px;
+		}
+		.location {
+			margin-bottom: 15px;
+		}
+
+		.descriptions {
+			opacity: .8;
+		}
+		.descrption {
+			margin-bottom: 20px;
+		}
+		
+
+		.placera {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		@media screen and (min-width: 1370px) {
+			.sidebar {
+				height: 100%;
+				overflow: auto;
+			}
+
+			.content {
+				max-width: 800px;
+			}
+		}
+
+		@media screen and (max-width: 1366px) {
+			.sidebar {
+				height: 100%;
+				overflow: auto;
+			}
+
+			.content {
+				max-width: 800px;
+			}
+		}
+
+		@media screen and (max-width: 1024px) {
+			.content {
+				max-width: 550px;
+				left: 300px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.sidebar {
+				width: 250px;
+			}
+			.content {
+				max-width: 450px;
+				left: 250px;
+			}
+
+			.skills {
+				width: 80%;
+			}
+		}
+
+		@media screen and (max-width: 414px) {
+			body {
+				overflow-x: hidden;
+			}
+			.sidebar {
+				display: none;
+			}
+			.content {
+				max-width: 350px;
+			}
+			.lb {
+				width: 350px;
+			}
+			.item__info {
+				flex-wrap: wrap;
+			}
+
+			.content {
+				overflow-x: hidden;
+				max-width: 350px;
+				position: static;
+				left: 0;
+				margin: 0;
+				padding: 5px;
+			}
+			.content__header {
+				max-width: 400px;
+			}
+			.descriptions {
+				width: 350px;
+				line-break: anywhere;
+			}
+
+		}
+
+		@media screen and (max-width: 320px) {
+			.content {
+				max-width: 270px;
+			}
+		}
+	</style>
+
+	<!-- ED2939 - red -->
+</head>
+<!-- bilenkom.0@gmail.com -->
+
+<body>
+	<aside class="sidebar">
+		<img src="http://stockexchange/app/custmfolders/e964003f1f95d75d8dee76ea73cd6455/images/avatars/avatar.jpg" alt="" class="avatar">
+		<div class="sidebar__content">
+			<details class="sidebar__content__block" open>
+    			<summary>Contacts</summary>
+    			<p>fomkin@sfg.ua</p>
+    			<p>+380687216215</p>
+    			<p><address>New, 6</address></p>
+    			<p><address>49000</address></p>
+    			<p><address>Dnipro</address></p>
+    			
+    			
+			</details>
+			<details class="sidebar__content__block" open>
+				<summary>Personal</summary>
+				<p><time datetime="01.10.2004 00:00:00">01.10.2004</time></p>
+				<p>Male</p>
+				<p>Ukr</p>
+			</details>
+		</div>
+	</aside>
+	<div class="content">
+		<header class="content__header">
+			<h1 class="name">
+				Sergey Fomkin  
+			</h1>
+			<div class="profs">
+				<h2 class="prof">Web programming</h2><h2 class="prof">Web programming</h2><h2 class="prof">Web programming</h2><h2 class="prof">Web programming</h2><h2 class="prof">Web programming</h2>
+			</div>
+			
+			<p class="descrption">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur corrupti, veniam culpa fuga, a aliquid error quis suscipit ex at provident beatae placeat eius ratione, laborum vero ullam sequi reprehenderit
+			</p>
+			<div class="main__title">
+				Skills
+			</div>
+			<div class="skills">
+				<div class="skill__item">
+					Figma <span class="degree"><span class="degree__level" style="width: 75%;"></span></span>(3/4)
+				</div>
+				<div class="skill__item">
+					Photoshop <span class="degree"><span class="degree__level" style="width:50%;"></span></span>(3/4)
+				</div>
+				
+			</div>
+		</header>
+
+		<hr class="lb">
+
+		<section class="content__item">
+			<div class="main__title">
+				Previuos experience
+			</div>
+			<div class="item__info">
+				<div class="info">
+					<div class="title">
+						Yatlantis
+					</div>
+					<div class="placera">
+						BA
+					</div>
+					<div class="location">
+						NUK, Dnipro
+					</div>
+					
+					<div class="descriptions">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perspiciatis, distinctio, tempora, praesentium maxime rerum recusandae autem nemo laudantium ipsum dicta minima? Possimus ab voluptatem incidunt est officiis, facere veniam?
+					</div>
+				</div>
+				<div class="date">Aug 2021 - Oct 2021</div>
+			</div>
+		</section>
+
+
+		<hr class="lb">
+		<section class="content__item">
+			<div class="main__title">
+				Studies
+			</div>
+			<div class="item__info">
+				<div class="info">
+					<div class="title">
+						Lyceum f information tech
+					</div>
+					<div class="location">
+						NUK, Dnipro
+					</div>
+					<div class="descriptions">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perspiciatis, distinctio, tempora, praesentium maxime rerum recusandae autem nemo laudantium ipsum dicta minima? Possimus ab voluptatem incidunt est officiis, facere veniam?
+					</div>
+				</div>
+				<div class="date">Aug 2021 - Oct 2021</div>
+			</div>
+		</section>
+
+
+		<hr class="lb">
+		<section class="content__item">
+			<div class="main__title">
+				Studies
+			</div>
+			<div class="item__info">
+				<div class="info">
+					<div class="title">
+						Lyceum f information tech
+					</div>
+					<div class="location">
+						NUK, Dnipro
+					</div>
+					<div class="descriptions">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perspiciatis, distinctio, tempora, praesentium maxime rerum recusandae autem nemo laudantium ipsum dicta minima? Possimus ab voluptatem incidunt est officiis, facere veniam?
+					</div>
+				</div>
+				<div class="date">Aug 2021 - Oct 2021</div>
+			</div>
+		</section>
+
+
+		<hr class="lb">
+		<section class="content__item">
+			<div class="main__title">
+				Studies
+			</div>
+			<div class="item__info">
+				<div class="info">
+					<div class="title">
+						Lyceum f information tech
+					</div>
+					<div class="location">
+						NUK, Dnipro
+					</div>
+					<div class="descriptions">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perspiciatis, distinctio, tempora, praesentium maxime rerum recusandae autem nemo laudantium ipsum dicta minima? Possimus ab voluptatem incidunt est officiis, facere veniam?
+					</div>
+				</div>
+				<div class="date">Aug 2021 - Oct 2021</div>
+			</div>
+		</section>
+
+
+		<hr class="lb">
+		<section class="content__item">
+			<div class="main__title">
+				Studies
+			</div>
+			<div class="item__info">
+				<div class="info">
+					<div class="title">
+						Lyceum f information tech
+					</div>
+					<div class="location">
+						NUK, Dnipro
+					</div>
+					<div class="descriptions">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam perspiciatis, distinctio, tempora, praesentium maxime rerum recusandae autem nemo laudantium ipsum dicta minima? Possimus ab voluptatem incidunt est officiis, facere veniam?
+					</div>
+				</div>
+				<div class="date">Aug 2021 - Oct 2021</div>
+			</div>
+		</section>
+
+
+		<hr class="lb">
+	</div>
+</body>
+</html>

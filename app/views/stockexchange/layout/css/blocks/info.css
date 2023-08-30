@@ -1,0 +1,52 @@
+/*info*/
+
+.info--gruop {
+    display: block;
+}
+
+.info__item {
+    width: 100%;
+    padding: 5px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.info__category {
+    margin: 5px 0;
+
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.info__text {
+    text-align: center;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-size: 13px;
+}
+
+.url__info {
+    text-transform: uppercase;
+    color: inherit;
+    font-size: inherit;
+    font-weight: 500;
+}
+
+.info__url {
+    text-decoration: none;
+    color: var(--info__urlc);
+    opacity: .5;
+}
+
+.info__url:hover {
+    text-decoration: underline;
+}
+
+.info__url.noc {
+    color: #f2f2f2;
+}

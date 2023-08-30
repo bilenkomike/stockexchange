@@ -1,0 +1,52 @@
+
+/*comment*/
+.comment__header {
+    margin: 1rem 0;
+    font-weight: 500;
+    font-size: 18px;  
+}
+
+.comments {
+    display: block;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.comment {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.comment__about {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.comment__image {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+}
+
+.comment__info {
+    margin-left: 1rem;
+}
+
+.comment__date {
+    opacity: .5;
+}
+
+.comment > .comments {
+    margin-left: 45px;
+}
+
+
+
+
+.read--comm {
+    color: #107EFF;
+    cursor: pointer;
+    text-decoration: underline;
+}

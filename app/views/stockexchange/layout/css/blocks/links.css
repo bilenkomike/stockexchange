@@ -1,0 +1,13 @@
+/*reg_log_links*/
+.reg__link {
+    display: block;
+    margin-left: 3px;
+    color: inherit;
+}
+
+.link__for_log_reg {
+    display: flex;
+    margin-top: 10px;
+
+    justify-content: center;
+}

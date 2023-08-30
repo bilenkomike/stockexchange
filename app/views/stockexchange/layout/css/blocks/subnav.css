@@ -1,0 +1,54 @@
+
+/*has-subnav*/
+.has-subnav {
+    position: relative;
+    padding-right: 3.5rem;
+}   
+
+/*subnav*/
+.subnav {
+    display: none;
+
+    width: 16.5rem;
+    padding:.5rem 0;
+
+    background-color: #8C8C8C;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 6px 8px rgba(0,0,0, .2);
+    z-index: 100000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.subnav__link {
+    display: block;
+    padding: .45rem 1.2rem;
+
+    font-size: 1.2rem;
+    color: inherit;
+    font-weight: 400;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color .2s ease-in-out;
+}
+
+.subnav__link:hover {
+        background-color: #6c7a89;
+        filter: brightness(70%);
+        text-decoration: none;
+}
+
+
+.nav__item:hover >.subnav {
+    display: block;
+}
+
+
+@media screen and (max-width: 485px) {
+    .subnav {
+        width: 100%;
+    }
+}

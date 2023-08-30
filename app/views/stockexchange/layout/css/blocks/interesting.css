@@ -1,0 +1,35 @@
+
+/*interesting*/
+.interesting__header {
+    margin: 1rem 0;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.interesting {
+    display: flex;
+    flex-wrap: wrap;
+}
+.interesting__item {
+    display: block;
+    width: 45%;
+    margin-right: 20px;
+    margin: 0 20px 10px 0;
+}
+
+.interesting__item__header {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--interest__header);
+    text-decoration: none;
+}
+.interesting__item__header:hover {
+    text-decoration: underline;
+}
+
+.interesting__item__time {
+    color: inherit;
+    opacity: .5;
+}

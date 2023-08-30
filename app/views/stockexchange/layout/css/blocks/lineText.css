@@ -1,0 +1,12 @@
+/*line__text*/
+
+.line__text {
+    margin: 10px auto; 
+    display: block;
+    width: 90%;
+    max-width:  250px;
+    height: 1px;
+    /*color: #101010;*/
+    border: 0;
+    background-color: #191919;
+}

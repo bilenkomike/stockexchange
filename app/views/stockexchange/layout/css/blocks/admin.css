@@ -1,0 +1,64 @@
+.admin__header {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    margin-top: -2px;
+
+    background-color: var(--header__bgc);/*#202020;*/
+    box-shadow: 5px 5px rgba(5,5,5, .2);
+
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 30;
+}
+
+.admin__nav {
+    display: flex;
+}
+
+.admin__burger {
+    display: none;
+}
+
+.admin__nav__btn {
+    width: 100%;
+    color: inherit;
+}
+
+.admin__nav__btn.activce {
+    background-color: #8C8C8C;
+}
+
+@media  screen and (max-width: 1340px) {
+    .admin__header {
+        position: fixed;
+
+        transition: height 1s linear;
+    }
+
+    .admin__header.active {
+        transition: height 1s linear;
+        height: auto;
+    }
+
+    .admin__burger {
+        display: block;
+
+    }
+    .admin__nav {
+        width: 100%;
+        display: none;
+        margin-top: 60px;
+        /*height: 0;*/
+    }
+
+    .admin__nav.active {
+        display: block;
+    }
+
+    .admin__nav > .nav__item {
+        width: 100%;
+        display: block;
+    }
+}

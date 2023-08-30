@@ -1,0 +1,339 @@
+.cv {
+	display: block;
+	width: 100%;
+	padding: 40px;
+	
+	border-radius: 5px;
+	background-color: #202020;
+	box-shadow: 10px 10px 10px rgba(0,0,0,.7);
+}
+
+.cv__header {
+	display: block;
+	width: 20%;
+	margin: 0 auto 20px;
+
+	text-align: center;
+	font-size: 25px;
+
+	border-bottom: 2px solid #f2f2f2;
+}
+
+.cv__content {
+	display: block;
+}
+
+.cv__content__item {
+	display: block;
+	width: 100%;
+	margin: 0 5px;
+}
+
+.cv__personal {
+	display: flex;
+	width: 100%;
+}
+
+.cv__personal__item {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.input.search.cv__input {
+	max-width: 500px;
+}
+.cv__image {
+	display: block;
+	width: 300px;
+	height: 400px;
+
+	margin: 0 auto;
+}
+
+.cv__input__header {
+	margin-bottom: 25px;
+	opacity: 0.8;
+}
+
+.cv__input__gruop {
+	margin: 10px auto;
+}
+.cv__select__item {
+	width: 33%;
+
+	position: relative;
+}
+
+.cv__select__header {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 5px;
+
+	cursor: pointer;
+	border-bottom: 1px solid #f2f2f2;
+	white-space: nowrap;
+}
+
+.cv__select__header > i  {
+	transition: transform .2s linear;
+}
+.cv__select__header > i.active {
+	transform: rotate(90deg);
+}
+
+.cv__select__list {
+	display: block;
+	width: 100%;
+	height: 0;
+	max-height: 200px;
+	padding: 0;
+	
+	background-color: #191919;
+
+	text-align: center;
+	overflow-y: auto;
+	
+	position: absolute;
+	top: 40px;
+	left: 0;
+	z-index: 5;
+
+	transition: height .2s linear;
+}
+.cv__select__list.active {
+	padding: 5px 10px;
+	height: auto;
+}
+
+.cv__select__list__option {
+	padding: 10px 20px;
+	cursor: pointer;
+
+	transition: background-color .2s linear;
+}
+
+.cv__select__list__option:hover {
+	background-color: #212121;
+}
+
+.cv__birth {
+	display: flex;
+	justify-content: space-between;
+}
+.CVtext__header {
+	display: flex;
+}
+
+.cv__select {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 35px;
+}
+
+.cv__select.birth__select {
+	display: block;
+	width: 100%;
+}
+
+.cv__select__gender {
+	justify-content: flex-start;
+}
+
+.cv__content__gruop {
+	display: block;
+	width: 100%;
+	padding: 20px 40px;
+	margin: 50px 0;
+
+	box-shadow: 10px 3px 10px rgba(0,0,0,.7);
+	border-radius: 5px;
+
+}
+
+.cv__gruop__content__item {
+	
+}
+
+
+.cv__gruop__header {
+	display: block;
+	margin-bottom: 15px;
+
+	font-size: 24px;
+
+}
+
+.added__content__item {
+	display: flex;
+	border: 1px solid rgba(0,0,0, .9);
+	margin: 10px 0;
+	padding: 10px;
+	border-radius: 7px;
+	box-shadow: 10px 10px 10px rgba(0,0,0, .5);
+
+	transition: background-color .2s linear;
+}
+
+.added__content__item.active {
+	background-color: #303030;
+
+}
+
+.added__content__item__info {
+	width: 70%;
+}
+
+.added__content__item__info__locdate {
+	display: flex;
+	margin-top: 5px;
+	width: 100%;
+	opacity: 0.7;
+
+	justify-content: space-between;
+}
+
+.added__content__item__header {
+	/*display: block;*/
+	font-size: 18px;
+}
+
+.added__content__item__header.position {
+	margin: 5px 0;
+	font-size: 16px;
+}
+
+.added__content__item__actins {
+	display: flex;
+	width: 30%;
+
+	justify-content: flex-end;
+}
+
+.added__content__item__actins__item {
+	display: block;
+	margin: 0 10px;
+
+	cursor: pointer;
+	font-size: 20px;
+
+}
+
+
+.cv__gruop__content__item__add {
+	display: block;
+	margin-bottom: 10px;
+
+	cursor: pointer;
+	
+	font-size: 20px;
+	float:  right;
+
+}
+
+.cv__item__add__form {
+	margin-top: 20px;
+}
+
+.cv__button__gruop {
+	display: flex;
+}
+
+
+
+.cv__button {
+	display: block;
+	margin: 0 5px;
+	padding: 10px 20px;
+
+	box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+
+	transition: box-shadow .2s linear;
+}
+
+.cv__button:hover {
+	box-shadow: 10px 10px 10px rgba(0,0,0, .5);
+}
+
+.cv__button--red {
+	color: red;
+	border: 1px solid red;
+}
+.cv__button--green {
+	color: green;
+	border: 1px solid green;
+}
+
+.cv__level__select {
+	width: 100%;
+	margin: 30px 0;
+}
+
+/* skills  */
+
+.skills {
+	width: 500px;
+    display: block;
+    margin: 30px 0;
+}
+.skills__item {
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto 10px 0;
+
+    font-size: 20px;
+    cursor: pointer;
+    opacity: .8;
+    border-bottom: 2px solid #c4c4c4;
+}
+
+.skills__item > i {
+    transition: transform .2s linear;
+}
+
+.skills__item:hover > i {
+    transform: rotate(90deg);
+}
+
+
+@media screen and (max-width: 1024px ) {
+	.cv__select {
+		display: block;
+		width: 99%;
+	}
+	.cv__birth {
+		display: block;
+	}
+	.cv__birth > .cv__select__item {
+		width: 100%;
+	}
+	.cv__select__item {
+		width: 100%;
+	}
+	.skills {
+		width: unset;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.cv {
+		padding: 5px;
+	}
+	.cv__personal {
+		flex-wrap: wrap;
+	}
+	.cv__personal__item {
+		width: 100%;
+	}
+	.cv__content__gruop {
+		padding: 10px 20px;
+	}
+	#cv__save__button {
+		margin:  10px auto;
+	}
+}
+
+
+

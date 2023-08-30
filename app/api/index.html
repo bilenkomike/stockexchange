@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CV</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			line-height: 1.3;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+
+			color: #107EFF;
+			text-decoration: none;
+			font-style: italic;
+		}
+
+		.sidebar {
+			display: block;
+			width: 300px;
+			height: 100vh;
+
+			color: #fff;
+
+			background-color: #050F34;
+
+			position: fixed;
+			overflow: hidden;
+			left: 0;
+			top: 0;
+		}
+
+		.sidebar__content {
+
+			margin-left: 20px;
+			overflow: auto;
+		}
+
+		.sidebar__content__block {
+			margin: 5px 0;
+		}
+
+		.sidebar__content__block > p,
+		.sidebar__content__block > address,  
+		.sidebar__content__block > time {
+			margin-left: 10px;
+			font-size: 16px;
+		}
+
+		.sidebar__content__block > summary {
+			/*margin-left: -10px;*/
+			font-size: 19px;
+			font-weight: 700;
+		}
+
+		.sidebar__lb {
+			width: 90%;
+			margin-left: auto;
+		}
+
+		.content {	
+			display: block;
+			width: 100%;
+			max-width: 1200px;		
+			margin: auto;
+			padding: 20px;
+
+			color: #000046;
+
+			position: absolute;
+			top: 0;
+			left: 400px;	
+		}
+
+		.content__header {
+			
+		}
+
+		.content__item {
+			margin-bottom: 50px;
+		}
+
+		.avatar {
+			display: block;
+			width: 100%;
+			max-width: 150px;
+			height: 150px;
+			margin: 20px auto;
+
+			border-radius: 50%;
+			border: 2px solid #fff;
+
+		}
+
+		.skills {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+			margin-left: 0;
+		}
+
+		.skill__item {
+			display: flex;
+			margin-right: 25px;
+			width: 46%;
+
+			justify-content: space-between;
+
+		}
+		.degree {
+			display: block;
+			width: 100px;
+			height: 5px;
+			margin: auto 40px auto 10px;
+
+			border-radius: 30px;
+
+			background-color: #331b39;
+
+			position: relative;
+			z-index: 1;
+		}
+		.degree__level {
+			display: block;
+			
+			height: 5px;
+
+			border-radius: 30px;
+
+			background-color: #FA6267;
+
+			position: absolute;
+
+
+		}
+		.name {
+			text-transform: capitalize;
+			font-size: 40px;
+		}
+		.profs {
+			display: flex;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+
+		.prof {
+			font-size: 25px;
+			width: 50%;
+			
+			margin-bottom: 5px;
+		}
+
+		.lb {
+			width: 100%;
+		}
+
+		.main__title {
+			margin-bottom: 30px;
+
+			font-size: 25px;
+			font-weight: 700;
+			color: #FA6267;
+		}
+
+		.item__info {
+			display: flex;
+
+			justify-content: space-between;
+
+			color: inherit;
+		}
+
+		.info {
+			display: block;
+			width: 70%;
+		}
+
+		.title {
+			margin-bottom: 15px;
+
+			font-weight: 700;
+			font-size: 22px;
+		}
+		.location {
+			margin-bottom: 15px;
+		}
+
+		.descriptions {
+			opacity: .8;
+		}
+		.descrption {
+			margin-bottom: 20px;
+		}
+		
+
+		.placera {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+
+
+		/*  burger */
+		.burger {
+			
+
+			display: block;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+
+			margin-top: 15px;
+			position: absolute;
+			z-index: 101;
+			left: 10px;
+			top: 5px;
+
+
+		}
+
+		.burger__item {
+			display: none;
+			font-size: 0;
+			width: 100%;
+			height: 5px;
+			margin: 7px 0;
+			border-radius: 2.5px;
+			background-color: #000;
+
+			transition: transform .2s linear, background-color .2s linear;
+		}
+
+		.burger.active > .burger__item {
+			transform: rotate(45deg);
+			background-color: #fff;
+		}
+
+		.burger.active > .burger__item:first-child {
+			display: none;
+		}
+		.burger.active > .burger__item:last-child {
+			transform: rotate(135deg);
+			position: absolute;
+			top: -1px;
+		}
+
+
+
+		@media screen and (min-width: 1370px) {
+			.sidebar {
+				height: 100%;
+				overflow: auto;
+			}
+
+			.content {
+				max-width: 800px;
+			}
+		}
+
+		@media screen and (max-width: 1366px) {
+			.sidebar {
+				height: 100%;
+				overflow: auto;
+			}
+
+			.content {
+				max-width: 800px;
+			}
+		}
+
+		@media screen and (max-width: 1024px) {
+			.content {
+				max-width: 550px;
+				left: 300px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.sidebar {
+				width: 250px;
+			}
+			.content {
+				max-width: 450px;
+				left: 250px;
+			}
+
+			.skills {
+				width: 80%;
+			}
+		}
+
+		@media screen and (max-width: 414px) {
+			body {
+				overflow-x: hidden;
+			}
+
+			body.no-scroll {
+				overflow: hidden;
+			}
+
+			.burger {
+				display: block;
+				 top: 2px;
+			}
+			.name {
+				margin-top: 50px;
+			}
+			.sidebar {
+				display: block;
+				width: 100vw;
+				position: absolute;
+				z-index: 100;
+				transform: translateX(-100vw);
+
+				overflow: hidden;
+
+				transition: transform .2s linear;
+			}
+
+			.sidebar.active {
+				transform: translateX(0);
+			}
+
+			.content {
+				max-width: 100vw;
+			}
+			.lb {
+				width: 350px;
+			}
+			.item__info {
+				flex-wrap: wrap;
+			}
+
+			.content {
+				overflow-x: hidden;
+				max-width: 350px;
+				position: static;
+				left: 0;
+				margin: 0;
+				padding: 5px;
+			}
+			.content__header {
+				margin-top: 20px;
+				max-width: 100vw;
+			}
+			.descriptions {
+				width: 350px;
+				line-break: anywhere;
+			}
+
+		}
+
+		@media screen and (max-width: 320px) {
+			.content {
+				max-width: 270px;
+			}
+		}
+	</style>
+	<script>
+
+
+		var search = window.location.search;
+		var prom = new Promise(function(resolve, reject)  {
+			var request = new XMLHttpRequest();
+			request.open('GET', 'http://localhost:8888/stockexchange/app/api/api.php' + search, true);
+			request.onload = resolve;
+			request.onerror = reject;
+			request.send(); 
+		});
+		prom.then(function(data) {
+			data = data.target.response;
+			cv = JSON.parse(data).cv;
+
+			console.log(cv);
+
+			if(cv.lang == '1') {
+				document.getElementById('contacts').innerHTML = 'Contacts';
+				document.getElementById('personal').innerHTML = 'Personal';
+			}
+			else if (cv.lang == '2') {
+				document.getElementById('contacts').innerHTML = 'Контакты';
+				document.getElementById('personal').innerHTML = 'Personal';
+			}
+			else if (cv.lang == '3') {
+				document.getElementById('personal').innerHTML = 'Personal';
+				document.getElementById('contacts').innerHTML = 'Контакти';
+			}
+
+			document.getElementById('ava').setAttribute('src', cv.ava);
+			document.getElementById('email').innerHTML = cv.email;
+			document.getElementById('proffecion').innerHTML = cv.proffecion;
+			document.getElementById('name__surname__patrinymic').innerHTML = cv.surname + ' ' + cv.name + ' ' + cv.patronymic;
+			document.getElementById('city__country').innerHTML = cv.country + ', ' + cv.city;
+			document.getElementById('adress').innerHTML = cv.adress;
+			document.getElementById('postal').innerHTML = cv.postal__code;
+			document.getElementById('date_birth').innerHTML = cv.birth__day + '.' + cv.birth__month + '.' + cv.birth__year;
+			document.getElementById('gender').innerHTML = cv.gender;
+			document.getElementById('selfdescription').innerHTML = cv.description;
+			if ( cv.linkedin__link != '' ) {
+				document.getElementById('socials').innerHTML = document.getElementById('socials').innerHTML + '<a href="' + cv.linkedin__link + '" target="_blank">Linkedin</a>';
+			} 
+			if ( cv.githab__link != '' ) {
+				document.getElementById('socials').innerHTML = document.getElementById('socials').innerHTML + '<a href="' + cv.githab__link + '" target="_blank">Git Hab</a>';
+			} 
+			if ( cv.instagram__link != '' ) {
+				document.getElementById('socials').innerHTML = document.getElementById('socials').innerHTML + '<a href="' + cv.instagram__link + '" target="_blank">Instagram</a>';
+			} 
+			if ( cv.fb__link != '' ) {
+				document.getElementById('socials').innerHTML = document.getElementById('socials').innerHTML + '<a href="' + cv.fb__link + '" target="_blank">FaceBook</a>';
+			} 
+
+			if (cv.education != '' ) {
+				educations = JSON.parse(cv.education);
+				education__items = Object.getOwnPropertyNames(educations);
+				for(let i = 0; i < education__items.length; i++ ) {
+					let educ_item = educations[education__items[i]];
+					let start_date = `${educ_item.start__date[0]} ${educ_item.start__date[1]}`;
+					console.log(start_date);
+					var end__date = '';
+					if ( educ_item.end__date[0] == '' && educ_item.end__date[1] == '' ) {
+						end__date = 'Present';
+					}
+					document.getElementById('studies').innerHTML = document.getElementById('studies').innerHTML +  `
+					<div class="item__info">
+						<div class="info">
+							<div class="title">
+								${educ_item.name}
+							</div>
+							<div class="location">
+								${educ_item.location}
+							</div>
+							<div class="descriptions">
+								${educ_item.description}
+							</div>
+						</div>
+						<div class="date">${start_date} - ${end__date}</div>
+					</div>`;
+				}
+			}
+
+			if ( cv.experience != '' ) {
+				experiences = JSON.parse(cv.experience);
+				console.log(experiences);
+				experiences__items = Object.getOwnPropertyNames(experiences);
+				for(let i = 0; i < experiences__items.length; i++ ) { 
+					exper__item = experiences[experiences__items[i]];
+					start__com__date = `${exper__item.start__dateCompany[0]} ${exper__item.start__dateCompany[1]}`;
+
+					end__com__date = '';
+
+					if( exper__item.end__dateCompany[0] == '' &&  exper__item.end__dateCompany[1] == '') {
+						end__com__date =  'Present';
+					}
+
+
+					document.getElementById('prevexper').innerHTML = document.getElementById('prevexper').innerHTML + `
+						<div class="item__info">
+							<div class="info">
+								<div class="title">
+									${exper__item.nameCompany}
+								</div>
+								<div class="placera">
+									${exper__item.positionCompany}
+								</div>
+								<div class="location">
+									${exper__item.locationCompany}
+								</div>
+								
+								<div class="descriptions">
+									${exper__item.descriptionCompany}
+								</div>
+							</div>
+							<div class="date">${start__com__date} - ${end__com__date}</div>
+						</div>
+					`;
+				}
+
+			}
+
+			skills = Object.values(JSON.parse(cv.skills));
+			skills_level = JSON.parse(cv.skills_level);
+
+			for ( let i = 0 ; i < skills.length; i++ ) {
+				document.getElementById('skills').innerHTML += `
+					<div class="skill__item">
+						${skills[i]} <span class="degree"><span class="degree__level" style="width: ${skills_level[skills[i]] * 25}%;"></span></span>(${skills_level[skills[i]]}/4)
+					</div>
+				`;
+			}
+
+
+
+			
+
+
+
+			
+
+
+		}).catch(function(){
+			console.error('Error loading api');
+		});
+
+
+	</script>
+	<!-- ED2939 - red -->
+</head>
+<!-- bilenkom.0@gmail.com -->
+
+<body>
+	<aside class="sidebar" id="sidebar">
+		<img  id ="ava" src="" alt="" class="avatar">
+		<div class="sidebar__content">
+			<details class="sidebar__content__block" open>
+    			<summary id="contacts">Contacts</summary>
+    			<p id="email"></p>
+    			<p id="phone"></p>
+    			<p><address id="city__country"></address></p>
+    			<p><address id="adress"></address></p>
+    			<p><address id="postal"></address></p>
+    			
+			</details>
+			<details class="sidebar__content__block" open>
+				<summary id="personal">Personal</summary>
+				<p><time datetime="01.10.2004 00:00:00" id="date_birth"></time></p>
+				<p id="gender"></p>
+				<p id="socials">
+				</p>
+			</details>
+		</div>
+	</aside>
+	<div class="content">
+		<header class="content__header">
+			<div class="burger" id="burger">
+				<span class="burger__item">
+					fwfwf
+				</span>
+				<span class="burger__item">
+					fwfwf
+				</span>
+				<span class="burger__item">
+					fwfwf
+				</span>
+			</div>
+			<h1 class="name" id="name__surname__patrinymic">  
+			</h1>
+			<div class="profs">
+				<h2 class="prof" id="proffecion">Web programming</h2>
+			</div>
+			
+			<p class="descrption" id="selfdescription"></p>
+			<div class="main__title">
+				Skills
+			</div>
+			<div class="skills" id="skills">
+			</div>
+		</header>
+
+
+		<hr class="lb">
+		<section class="content__item" id="studies">
+			<div class="main__title">
+				Studies
+			</div>
+			
+		</section>
+
+
+
+		<hr class="lb">
+
+		<section class="content__item" id="prevexper">
+			<div class="main__title">
+				Previuos experience
+			</div>
+			
+		</section>
+
+	</div>
+
+	<script>
+		var burger = document.getElementById('burger');
+		burger.addEventListener('click', function() {
+			this.classList.toggle('active');
+			document.getElementById('sidebar').classList.toggle('active');
+			document.body.classList.toggle('no-scroll');
+		});
+	</script>
+</body>
+</html>

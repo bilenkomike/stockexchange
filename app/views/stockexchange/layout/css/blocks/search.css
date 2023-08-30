@@ -1,0 +1,141 @@
+.search {
+    width: 100%;
+    max-width: 21rem;
+}
+
+
+.serch__page__title {
+    display: block;
+    margin: 10px 0 50px;
+
+    font-size: 21px;
+}
+.serch__page__title__result {
+    font-style: italic;
+}
+
+.searches {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search__item {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    background-color: var(--search__bgc);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.6);
+}
+/*.search__item.us {
+    display: flex;
+}*/
+
+.search__content {
+    display: block;
+
+}
+
+.search__item.users {
+    display: flex;
+}
+
+.search__item.users > .search__content {
+    width: 100%;
+}
+
+.search__item.users > .search__content > .search__title {
+    width: 100%;
+}
+
+.search__item.users > .search__content > .search__after__content {
+    width: 100%;
+}
+.search__item.users > .search__content > .search__after__content > .search__after__content__right {
+    display: block;
+}
+
+.search__item.users > .search__content > .search__after__content > .search__after__content__right > .search__link {
+    display: block;
+    margin: 8px auto;
+    text-align: right;
+}
+
+.search__image {
+    display: block;
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+}
+
+.search__title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.search__text {
+    margin: 20px 0 10px;
+
+    font-size: 14px;
+    color: inherit;
+    opacity: 0.7;
+}
+
+.search__link {
+    font-size: 14px;
+    color: #107EFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search__link.green {
+    color: green;
+}
+
+.search__link:hover {
+    text-decoration: underline;
+}
+
+.search__after__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search__after__content__left {
+    display: flex;
+
+    opacity: 0.8;
+}
+
+.search__after__content__left.users {
+    margin-top: 15px;
+}
+
+
+.search__date {
+    margin-right: 10px;
+}
+
+.search__tag {
+    display: flex;
+}
+
+.search__tag:before {
+    content: "";
+
+    display: flex;
+    width: 6px;
+    height: 6px;
+    margin: 5px 10px 0;
+
+    background-color: #C4C4C4;
+
+    border-radius: 50%;
+}
